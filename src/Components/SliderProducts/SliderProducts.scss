@@ -1,0 +1,202 @@
+#SliderProducts{
+    height: 100%;
+    width: 100%;
+    max-width: 65rem;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+   & .name-section{
+       padding: 0 1rem;
+       margin-top: 40px;
+       margin-bottom: 15px;
+        & h3{
+            color: #000;
+            font-size: 20px;
+            font-weight: bold;
+        }
+   }
+
+    & .swiper {
+        width: 100%;
+        // height: 100%;
+        height: 353px;
+
+        & .swiper-button-prev{
+            background: #000;
+            color: #fff;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            // margin-left: -30px;
+            margin-top: -30px;
+            outline: none;
+            font-size: 5px;
+            cursor: pointer;
+            &:hover{
+                background: #000;
+            }
+            &:after{
+                font-size: 12px;
+            }
+        }
+
+        & .swiper-button-next{
+            background: #000;
+            color: #fff;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            // margin-right: -30px;
+            margin-top: -30px;
+            outline: none;
+            cursor: pointer;
+            &:hover{
+                background: #000;
+            }
+            &:after{
+                font-size: 12px;
+            }
+        }
+
+        & .swiper-button-prev, .swiper-button-next{
+            opacity: 0;
+        }
+
+        & .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+          
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+          
+        & .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        & .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+            bottom: 0 !important;
+        }
+
+        & .swiper-pagination-bullet-active{
+           
+            background-color: #F8475F;
+        }
+
+        @media screen and (min-width: 620px) {
+            & .swiper-pagination {
+               display: none;
+            }
+
+            & .swiper-button-prev, .swiper-button-next{
+                opacity: 1;
+            }
+        }
+    }
+
+    & .card{
+        background: #fff;
+        cursor: pointer;
+        transition: all .5s ease-in;
+
+        & .card-image{
+            height: 200px;
+            // width: 216px;
+        }
+
+        @media screen and (max-width: 620px) {
+            & .card-image{
+                // width: 163px;
+                height: 151px;
+
+            }
+        }
+
+        &:hover{
+            background: #E6E8EA;
+        }
+
+        &:hover button{
+            opacity: 1 !important;
+            transition: all .5s ease-in;
+        }
+
+       & .card-body{
+            padding: 10px;
+            width: 80%;
+            margin: 0 auto;
+
+            & .card-title{
+                text-align: center;
+                letter-spacing: 0px;
+                color: #7A7A7A;
+                font-size: 16px;
+                margin-bottom: 3px;
+            }
+
+            & .stars{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 3px;
+            }
+
+            & .prices {
+
+                & .prices-current{
+                    text-align: center;
+                    font-size: 18px;
+                    letter-spacing: 0px;
+                    color: #000000;
+                    font-weight: bold;
+                }
+
+                & .prices-previous{
+                    text-align: center;
+                    text-decoration: line-through;
+                    font-size: 12px;
+                    letter-spacing: 0px;
+                    color: #7A7A7A;
+                    margin-bottom: 3px;
+                }
+
+                & span {
+                    display: inline-block;
+                    text-align: center;
+                    font-size: 11px;
+                    letter-spacing: 0px;
+                    color: #7A7A7A;
+                }
+            }
+
+            & button {
+                margin-top: 8px;
+                cursor: pointer;
+                background: #000000;
+                color: #fff;
+                border-radius: 5px;
+                border: none;
+                width: 100%;
+                height: 32px;
+                opacity: 0;
+            }
+        }
+    }     
+}

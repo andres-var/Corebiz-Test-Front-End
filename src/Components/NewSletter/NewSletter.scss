@@ -1,0 +1,65 @@
+#NewSletter{
+    background: #F2F2F2;
+    width: 100%;
+    min-height: 146px;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & h3{
+        margin: 15px 0;
+        color: #333333;
+    }
+    
+    & form{
+        width: 100%;
+    }
+
+    & div{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 10px;
+
+        & input, button{
+            max-width: 280px;
+            width: 100%;
+            height: 48px;
+            border: unset;
+            color: #585858;
+            border-radius: 5px;
+            padding: 0 10px;
+            font-size: 14px;
+            outline: none;
+            margin-bottom: 15px;
+        }
+
+       
+        & .error{
+            border: 1px solid red;
+        }
+
+        & .loading{
+            background : #2222
+        }
+        
+
+        & button {
+            background: #000;
+            color: #FFFFFF;
+            border: unset;
+            cursor: pointer;
+            width: 140px;
+        }
+
+        @media screen and (max-width: 620px) {
+           &{
+                flex-direction: column;
+           }
+        }
+    }
+}
