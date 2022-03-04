@@ -62,6 +62,11 @@ const SliderProducts = ({
 					}, index) => (
 						<SwiperSlide key={index}>
 							<div className="card">
+								{ !listPrice && (
+									<div className="off">
+										<span>OFF</span>
+									</div>
+								)}
 								<div className="card-image">
 									<img src={ imageUrl ?? `https://picsum.photos/id/${index}/400/400`} alt="img" />
 								</div>
