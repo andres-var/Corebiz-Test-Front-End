@@ -1,11 +1,6 @@
 import React    from "react";
 import HomePage from "./HomePage";
 
-const HomePageContainer = () => {
-	console.log("Componente logico");
-	return (
-		<HomePage />
-	);
-};
+const HomePageContainer = () => <HomePage />;
 
 export default HomePageContainer;
