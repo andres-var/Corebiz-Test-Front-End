@@ -11,7 +11,7 @@ const NewSletterContainer = () => {
 
 	const [ isLoading, setIsLoading ] = useState(false);
 
-	const { register, handleSubmit, formState : { errors } } = useForm({
+	const { register, handleSubmit, reset ,formState : { errors } } = useForm({
 		defaultValues : {
 			email : "",
 			name  : "",
@@ -34,7 +34,10 @@ const NewSletterContainer = () => {
 				pauseOnHover : true,
 				draggable    : true,
 				progress     : undefined,
-				onClose      : () => setIsLoading(false),
+				onClose      : () => {
+					setIsLoading(false)
+					reset()
+				},
 				theme     	  : "dark",
 			});
 
