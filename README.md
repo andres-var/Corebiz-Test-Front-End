@@ -1,5 +1,8 @@
 # Test Frontend Corebiz
 
+## link
+Open [https://test-frontend-corebiz.netlify.app/](https://test-frontend-corebiz.netlify.app/) to view it in the browser.
+
 ## Available Scripts
 
 In the project directory, you can run:
